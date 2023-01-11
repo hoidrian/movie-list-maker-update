@@ -4,13 +4,69 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-h1{
-   color: rgb(255, 255, 255);
-   font-size: 200px;
-   font-family: 'Rowdies', cursive;
-   text-align: center;
-   padding-top: 5%;
+header{
+    h1{
+       color: rgb(255, 255, 255);
+       font-size: 4rem;
+       font-family: 'Rowdies', cursive;
+       text-align: center;
+       padding-top: 5%;
+    }
 }
+
+//drop-down-list
+//mobie nav style
+.menu-content {
+    padding: 0 0 0 150px;
+    max-height: 0;
+    overflow: hidden;
+}
+.collapsible-menu {
+    background-color: rgba(255, 255, 255, 0.568);
+    padding: 0px 40px;
+    border-bottom: 3px solid #e08cfc;
+    box-shadow: 2px 2px 3px white;
+    position: fixed;
+    top: 4%;
+    right: 2%;
+    z-index: 10;
+    letter-spacing: 2px;
+    label {
+        font-family: 'Roboto', sans-serif;
+        color: #8f26b3;
+        font-size: 1.7rem;
+        display: block;
+        cursor: pointer;
+        padding: 5% 0%;
+        opacity: 0.8;
+        text-align: center;
+        transition: 0.5s;
+        padding-bottom: 1%;
+        &:hover,
+        &:focus{
+        scale: 1.1;
+        }
+    }   
+    input#menu {
+        display: none;
+    }
+    ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    li{
+        color: #e08cfc;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+/* Toggle Effect */
+input:checked ~ .menu-content {
+    max-height: 100%;
+}
+//drop down style ends
+
+
 //main
 .image-container{
     margin: 0 auto;
@@ -21,6 +77,13 @@ h1{
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     width: 259px;
     height: 384px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #777777;
 }
 .buttons{
     margin-top: 5%;
