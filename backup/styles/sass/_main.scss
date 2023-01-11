@@ -1,0 +1,54 @@
+
+body{
+    background-image: url("../asset/background-main.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+   color: rgb(255, 255, 255);
+   font-size: 200px;
+   font-family: 'Rowdies', cursive;
+   text-align: center;
+   padding-top: 5%;
+}
+//main
+.image-container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    width: 259px;
+    height: 384px;
+}
+.buttons{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    button{
+        border: none;
+        padding: 5px;
+        font-size: 80px;
+        height: 130px;
+        width: 130px;
+        box-shadow: 0 2px 4px rgb(0, 0, 0);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin: 5%;
+        border-radius: 50%;
+        
+
+    }
+    .no{
+        background-color: white;
+        color: #e08cfc;
+    }
+    .yes{
+        background: #f390d7;
+        background: linear-gradient(90deg,#f1ceda 0%, #e08cfc 80%);
+        background: -webkit-linear-gradient(90deg,#f1ceda 0%, #e08cfc 80%);
+        background: -moz-linear-gradient(90deg,#f1ceda 0%, #e08cfc 80%);
+        color: white;
+    }
+}
