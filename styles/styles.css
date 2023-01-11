@@ -21,7 +21,7 @@ header h1 {
 .collapsible-menu {
   background-color: rgba(255, 255, 255, 0.568);
   padding: 0px 40px;
-  border-bottom: 3px solid #e08cfc;
+  border-bottom: 3px solid #cc82db;
   -webkit-box-shadow: 2px 2px 3px white;
           box-shadow: 2px 2px 3px white;
   position: fixed;
@@ -32,7 +32,8 @@ header h1 {
 }
 .collapsible-menu label {
   font-family: "Roboto", sans-serif;
-  color: #8f26b3;
+  color: #a864be;
+  font-weight: 600;
   font-size: 1.7rem;
   display: block;
   cursor: pointer;
@@ -103,10 +104,13 @@ h2 {
   -webkit-box-shadow: 0 2px 4px rgb(0, 0, 0);
           box-shadow: 0 2px 4px rgb(0, 0, 0);
   cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   margin: 5%;
   border-radius: 50%;
+}
+.buttons button:hover {
+  scale: 1.1;
 }
 .buttons .no {
   background-color: white;
