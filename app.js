@@ -53,9 +53,9 @@
         image.src = `https://image.tmdb.org/t/p/original/${movieArray[i].poster_path}`
         image.alt = `${movieArray[i].title} poster`;
         const movieInfo = document.createElement("div");
-        movieInfo.appendChild(title);
         movieInfo.appendChild(image);
-        document.querySelector(".movie").appendChild(movieInfo);
+        movieInfo.appendChild(title);
+        document.querySelector(".image-container").appendChild(movieInfo);
         return movieArray;
     }
     
@@ -66,7 +66,7 @@
             const newListItem = document.querySelector("h2").innerText;
             console.log(newListItem);
             // remove object from movieArray
-            document.querySelector(".movie").innerHTML = ""
+            document.querySelector(".image-container").innerHTML = ""
             // run displayMovie function again
             movieApp.displayMovie()
         })
