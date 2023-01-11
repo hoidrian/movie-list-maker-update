@@ -56,7 +56,8 @@
         movieInfo.appendChild(image);
         movieInfo.appendChild(title);
         document.querySelector(".image-container").appendChild(movieInfo);
-        return movieArray;
+        const garbageBin = movieApp.movieList.splice(i,1);
+        console.log(movieApp.movieList);
     }
     
     movieApp.setUpEventListeners = function() {
@@ -68,7 +69,7 @@
             // remove object from movieArray
             document.querySelector(".image-container").innerHTML = ""
             // run displayMovie function again
-            movieApp.displayMovie()
+            movieApp.displayMovie(movieApp.movieList);
         })
         const noButton = document.querySelector(".no");
         noButton.addEventListener("click", function(){
