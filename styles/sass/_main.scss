@@ -50,10 +50,6 @@ header{
     input#menu {
         display: none;
     }
-    ul {
-    list-style-type: none;
-    padding: 0;
-    }
     li{
         color: #464242;
         font-family: 'Roboto', sans-serif;
@@ -76,14 +72,14 @@ input:checked ~ .menu-content {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    width: 400px;
+    width: 350px;
     
 }
 
 h2{
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #777777;
 }
 .buttons{
