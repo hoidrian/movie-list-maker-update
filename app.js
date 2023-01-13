@@ -63,13 +63,33 @@
     movieApp.displayMovie = function(movieArray) {
         //randonlizing array[i] using math floor
         const i = Math.floor(Math.random() * movieArray.length);
-        //creating html to input extracted objects (title and image)
+        //creating html to input extracted title and poster objects
         document.querySelector(".image-container").innerHTML = "";
         const title = document.createElement("h2");
         title.innerText = movieArray[i].title;
         const image = document.createElement("img");
         image.src = `https://image.tmdb.org/t/p/original/${movieArray[i].poster_path}`
         image.alt = `${movieArray[i].title} poster`;
+        
+        //creating html to input extracted extra details (release date, overview, average viewer rating)
+        const overlay = document.querySelector(".overlay");
+        overlay.innerHTML = "";
+
+        const releaseDate = document.createElement("p");
+        releaseDate.classList("releaseDate");
+        releaseDate.innerText(`Release Date: ${movieArray[i].release_date}`);
+
+        const overview = document.createElement("p");
+        overview.classList("releaseDate");
+        overview.innerText(`Overview: ${movieArray[i].overview}`);
+
+        const voteAverage = document.createElement("p");
+        voteAverage.classList("releaseDate");
+        voteAverage.innerText(`Average viewer rating: ${movieArray[i].vote_average} (${movieArray[i].vote_count} total votes)`);
+
+        overlay.append(releaseDate, overview, voteAverage);
+
+
         //appending selected object as child element into selected querySelector
         const movieInfo = document.createElement("div");
         movieInfo.appendChild(image);
