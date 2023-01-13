@@ -24,12 +24,16 @@
 //getting api key
     movieApp.apiKey = "e21d59eeaa5f5c9a061e1be07d38cac1"
     movieApp.movieList = [];
+    movieApp.page = 1;
+    movieApp.counter = 1;
+
     movieApp.getMovieList = function() {
         // build url endpoint
         const movieUrl = new URL(`https://api.themoviedb.org/3/movie/popular`);
         //add in params
         movieUrl.search = new URLSearchParams({
             api_key: movieApp.apiKey,
+            page: movieApp.page,
         });
         // make fetch call
         fetch(movieUrl)
@@ -38,6 +42,7 @@
         })
         .then(function(jsonResponse){
             movieApp.movieList = jsonResponse.results;
+            console.log(jsonResponse);
             movieApp.displayMovie(movieApp.movieList);
         })
     }
@@ -49,6 +54,7 @@
         //randonlizing array[i] using math floor
         const i = Math.floor(Math.random() * movieArray.length);
         //creating html to input extracted objects (title and image)
+        document.querySelector(".image-container").innerHTML = "";
         const title = document.createElement("h2");
         title.innerText = movieArray[i].title;
         const image = document.createElement("img");
@@ -60,7 +66,6 @@
         movieInfo.appendChild(title);
         document.querySelector(".image-container").appendChild(movieInfo);
         const garbageBin = movieApp.movieList.splice(i,1);
-        //console.log(movieApp.movieList);
     }
     
     //execute the function by setting up eventListener
@@ -75,6 +80,12 @@
             document.querySelector(".image-container").innerHTML = ""
             // run displayMovie function again
             movieApp.displayMovie(movieApp.movieList);
+            movieApp.counter++;
+            if (movieApp.counter === 20) {
+                movieApp.page = Math.floor(Math.random() * 500);
+                movieApp.counter = 1;
+                movieApp.getMovieList();
+            }
         })
         //configuring the no button
         const noButton = document.querySelector(".no");
