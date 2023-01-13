@@ -78,8 +78,8 @@
             const listingMovie = document.createElement("p");
             listingMovie.innerText = newListItem;
             document.querySelector("ul").appendChild(listingMovie);
-            // remove object from movieArray
-            document.querySelector(".image-container").innerHTML = ""
+            // remove object from page
+            document.querySelector(".image-container").innerHTML = "";
             // run displayMovie function again
             movieApp.displayMovie(movieApp.movieList);
             movieApp.counter++;
@@ -93,8 +93,16 @@
         const noButton = document.querySelector(".no");
         noButton.addEventListener("click", function(){
             console.log("next movie");
-            // remove object from movieArray
+            // remove object from page
+            document.querySelector(".image-container").innerHTML = "";
             // run displayMovie function again
+            movieApp.displayMovie(movieApp.movieList);
+            movieApp.counter++;
+            if (movieApp.counter === 20) {
+                movieApp.page = Math.floor(Math.random() * 500);
+                movieApp.counter = 1;
+                movieApp.getMovieList();
+            }
         })
     }
     //upon page load - fecting data (getMovieList) and append data (setUpEventListeners)
