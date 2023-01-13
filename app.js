@@ -26,6 +26,13 @@
     movieApp.movieList = [];
     movieApp.page = 1;
     movieApp.counter = 1;
+    movieApp.listEventListener = function(listing) {
+        listing.addEventListener("click", function(event) {
+            if (confirm("Would you like to delete this from your list?")) {
+                document.querySelector("ul").removeChild(this);
+            }
+        });            
+    }
 
     movieApp.getMovieList = function() {
         // build url endpoint
@@ -75,11 +82,13 @@
         yesButton.addEventListener("click", function(){
             // add movie title to watchList
             const newListItem = document.querySelector("h2").innerText;
-            const listingMovie = document.createElement("p");
+            const listingMovie = document.createElement("li");
             listingMovie.innerText = newListItem;
+            listingMovie.classList = "list";
             document.querySelector("ul").appendChild(listingMovie);
             // remove object from page
             document.querySelector(".image-container").innerHTML = "";
+            movieApp.listEventListener(listingMovie);
             // run displayMovie function again
             movieApp.displayMovie(movieApp.movieList);
             movieApp.counter++;
