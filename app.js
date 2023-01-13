@@ -98,7 +98,7 @@
                 movieApp.arrayCounter++;
                 console.log(movieApp.arrayCounter);
                 if (movieApp.arrayCounter === 20) {
-                    movieApp.page = Math.floor(Math.random() * 500);
+                    movieApp.page = Math.floor(Math.random() * 150);
                     movieApp.arrayCounter = 1;
                     movieApp.getMovieList();
                 }
