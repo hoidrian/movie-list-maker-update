@@ -1,5 +1,5 @@
 body {
-  background-image: url("../asset/background-main.jpg");
+  background-image: url("../asset/background-2.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -20,7 +20,7 @@ header h1 {
 .collapsible-menu {
   background-color: rgba(255, 255, 255, 0.568);
   padding: 0px 40px;
-  border-bottom: 3px solid #cc82db;
+  border-bottom: 3px solid #c11959;
   -webkit-box-shadow: 2px 2px 3px white;
           box-shadow: 2px 2px 3px white;
   position: fixed;
@@ -31,7 +31,7 @@ header h1 {
 }
 .collapsible-menu label {
   font-family: "Roboto", sans-serif;
-  color: #a864be;
+  color: #c11959;
   font-weight: 600;
   font-size: 1.7rem;
   display: block;
@@ -144,8 +144,8 @@ input:checked ~ .menu-content {
 h2 {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: #777777;
+  font-size: 1.1rem;
+  color: white;
 }
 
 .buttons {
@@ -175,13 +175,13 @@ h2 {
 }
 .buttons .no {
   background-color: white;
-  color: #e08cfc;
+  color: #c11959;
 }
 .buttons .yes {
   background: #f390d7;
-  background: -webkit-gradient(linear, left top, right top, from(#f1ceda), color-stop(80%, #e08cfc));
-  background: linear-gradient(90deg, #f1ceda 0%, #e08cfc 80%);
-  background: -moz-linear-gradient(90deg, #f1ceda 0%, #e08cfc 80%);
+  background: -webkit-gradient(linear, left top, right top, from(#f1ceda), color-stop(80%, #df2169));
+  background: linear-gradient(90deg, #f1ceda 0%, #df2169 80%);
+  background: -moz-linear-gradient(90deg, #f1ceda 0%, #df2169 80%);
   color: white;
 }
 
