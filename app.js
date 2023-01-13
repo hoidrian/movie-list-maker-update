@@ -75,7 +75,9 @@
         yesButton.addEventListener("click", function(){
             // add movie title to watchList
             const newListItem = document.querySelector("h2").innerText;
-            console.log(newListItem);
+            const listingMovie = document.createElement("p");
+            listingMovie.innerText = newListItem;
+            document.querySelector("ul").appendChild(listingMovie);
             // remove object from movieArray
             document.querySelector(".image-container").innerHTML = ""
             // run displayMovie function again
