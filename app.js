@@ -25,11 +25,14 @@
     movieApp.apiKey = "e21d59eeaa5f5c9a061e1be07d38cac1"
     movieApp.movieList = [];
     movieApp.page = 1;
-    movieApp.counter = 1;
+    movieApp.arrayCounter = 1;
+    movieApp.listCounter = 0;
     movieApp.listEventListener = function(listing) {
-        listing.addEventListener("click", function(event) {
+        listing.addEventListener("click", function() {
             if (confirm("Would you like to delete this from your list?")) {
-                document.querySelector("ul").removeChild(this);
+                document.querySelector("ol").removeChild(this);
+                movieApp.listCounter--;
+                console.log(movieApp.listCounter);
             }
         });            
     }
@@ -81,21 +84,28 @@
         const yesButton = document.querySelector(".yes");
         yesButton.addEventListener("click", function(){
             // add movie title to watchList
-            const newListItem = document.querySelector("h2").innerText;
-            const listingMovie = document.createElement("li");
-            listingMovie.innerText = newListItem;
-            listingMovie.classList = "list";
-            document.querySelector("ul").appendChild(listingMovie);
-            // remove object from page
-            document.querySelector(".image-container").innerHTML = "";
-            movieApp.listEventListener(listingMovie);
-            // run displayMovie function again
-            movieApp.displayMovie(movieApp.movieList);
-            movieApp.counter++;
-            if (movieApp.counter === 20) {
-                movieApp.page = Math.floor(Math.random() * 500);
-                movieApp.counter = 1;
-                movieApp.getMovieList();
+            if (movieApp.listCounter <= 15) {
+                const newListItem = document.querySelector("h2").innerText;
+                const listingMovie = document.createElement("li");
+                listingMovie.innerText = newListItem;
+                listingMovie.classList = "list";
+                document.querySelector("ol").appendChild(listingMovie);
+                // remove object from page
+                document.querySelector(".image-container").innerHTML = "";
+                movieApp.listEventListener(listingMovie);
+                // run displayMovie function again
+                movieApp.displayMovie(movieApp.movieList);
+                movieApp.arrayCounter++;
+                console.log(movieApp.arrayCounter);
+                if (movieApp.arrayCounter === 20) {
+                    movieApp.page = Math.floor(Math.random() * 500);
+                    movieApp.arrayCounter = 1;
+                    movieApp.getMovieList();
+                }
+                movieApp.listCounter++;
+                console.log(movieApp.listCounter);
+            } else {
+                alert("List Full! Remove items before adding you can add more.")
             }
         })
         //configuring the no button
@@ -106,10 +116,10 @@
             document.querySelector(".image-container").innerHTML = "";
             // run displayMovie function again
             movieApp.displayMovie(movieApp.movieList);
-            movieApp.counter++;
-            if (movieApp.counter === 20) {
+            movieApp.listCounter++;
+            if (movieApp.listCounter === 20) {
                 movieApp.page = Math.floor(Math.random() * 500);
-                movieApp.counter = 1;
+                movieApp.listCounter = 1;
                 movieApp.getMovieList();
             }
         })
