@@ -220,6 +220,11 @@ footer {
     left: 2%;
   }
 }
+@media (max-width: 400px) {
+  .overlay p {
+    font-size: 0.8rem;
+  }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
