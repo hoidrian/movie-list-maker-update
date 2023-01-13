@@ -87,7 +87,7 @@
         voteAverage.classList = "releaseDate";
         voteAverage.innerText = `Average viewer rating: ${movieArray[i].vote_average} (${movieArray[i].vote_count} total votes)`;
 
-        overlay.append(releaseDate, overview, voteAverage);
+        overlay.append(overview, releaseDate, voteAverage);
 
 
         //appending selected object as child element into selected querySelector

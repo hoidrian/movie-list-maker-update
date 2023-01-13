@@ -26,7 +26,7 @@ header{
     border-bottom: 3px solid #cc82db;
     box-shadow: 2px 2px 3px white;
     position: fixed;
-    top: 4%;
+    top: 15%;
     right: 2%;
     z-index: 10;
     letter-spacing: 2px;
@@ -49,6 +49,11 @@ header{
     }   
     input#menu {
         display: none;
+    }
+    ol{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     li{
         color: #464242;
@@ -84,7 +89,7 @@ input:checked ~ .menu-content {
     
 }
 .overlay{
-    z-index: 10;
+    z-index: 5;
     height: 100%;
     width: 100%;
     background: rgba(0,0,0, 0.6);
@@ -105,6 +110,8 @@ input:checked ~ .menu-content {
         font-size: 1.2rem;
         color: white;
         text-transform: capitalize;
+        font-family: "Roboto", sans-serif;
+        padding: 1%;
     }
     &:hover{
         opacity: 1;
@@ -164,17 +171,12 @@ footer{
         }
     }
 
-    .collapsible-menu{
-        max-width: 40%;
+    .collapsible-menu{ 
         padding: 5px;
         top: 10%;
         label{
             font-size: 1.2rem;
         }
-    }
-
-    .image-container{
-        width: 65%;
     }
 
     .buttons{
@@ -186,3 +188,12 @@ footer{
         }
     }
   }
+
+@media (max-width: 500px){
+    .wrapper{
+        margin-top: 15%;
+    }
+    .collapsible-menu{
+        left: 2%;
+    }
+}
