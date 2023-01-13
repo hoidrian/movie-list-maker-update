@@ -71,6 +71,9 @@
             // add movie title to watchList
             const newListItem = document.querySelector("h2").innerText;
             console.log(newListItem);
+            // const listingMovie = document.createElement("li");
+            // listingMovie.appendChild(newListItem);
+            // document.querySelector("ul").appendChild(movieInfo);
             // remove object from movieArray
             document.querySelector(".image-container").innerHTML = ""
             // run displayMovie function again
@@ -79,9 +82,13 @@
         //configuring the no button
         const noButton = document.querySelector(".no");
         noButton.addEventListener("click", function(){
-            console.log("next movie");
+            // discard the moive
+            const newListItem = document.querySelector("h2").innerText;
+            console.log(newListItem);
             // remove object from movieArray
+            document.querySelector(".image-container").innerHTML = ""
             // run displayMovie function again
+            movieApp.displayMovie(movieApp.movieList);
         })
     }
     //upon page load - fecting data (getMovieList) and append data (setUpEventListeners)
