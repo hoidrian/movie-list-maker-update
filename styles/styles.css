@@ -77,6 +77,38 @@ input:checked ~ .menu-content {
   width: 350px;
 }
 
+.overlay {
+  height: 50%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  text-align: center;
+}
+.overlay p {
+  font-size: 1.2rem;
+  color: black;
+  text-transform: capitalize;
+}
+.overlay:hover {
+  opacity: 1;
+}
+
 h2 {
   text-align: center;
   font-family: "Roboto", sans-serif;
