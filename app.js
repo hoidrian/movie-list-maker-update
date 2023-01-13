@@ -125,7 +125,7 @@
                 movieApp.listCounter++;
                 console.log(movieApp.listCounter);
             } else {
-                alert("List Full! Remove items before adding you can add more.")
+                alert("Hey there~ Your List is FULL! Remove items before adding you can add more.")
             }
         })
         //configuring the no button

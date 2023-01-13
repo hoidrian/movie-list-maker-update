@@ -45,6 +45,7 @@ header h1 {
 }
 .collapsible-menu label:hover, .collapsible-menu label:focus {
   scale: 1.1;
+  color: #464242;
 }
 .collapsible-menu input#menu {
   display: none;
@@ -67,6 +68,7 @@ header h1 {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   padding-left: 5%;
+  cursor: pointer;
 }
 
 /* Toggle Effect */
@@ -212,6 +214,7 @@ footer {
 @media (max-width: 500px) {
   .wrapper {
     margin-top: 15%;
+    width: 60%;
   }
   .collapsible-menu {
     left: 2%;
