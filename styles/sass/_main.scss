@@ -75,7 +75,30 @@ input:checked ~ .menu-content {
     width: 350px;
     
 }
-
+.overlay{
+    height: 50%;
+    width: 50%;
+    background: rgba(0,0,0, 0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+    text-align: center;
+    p{
+        font-size: 1.2rem;
+        color: black;
+        text-transform: capitalize;
+    }
+    &:hover{
+        opacity: 1;
+        }
+}
 h2{
     text-align: center;
     font-family: 'Roboto', sans-serif;
