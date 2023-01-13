@@ -71,23 +71,23 @@
         image.src = `https://image.tmdb.org/t/p/original/${movieArray[i].poster_path}`
         image.alt = `${movieArray[i].title} poster`;
         
-        // //creating html to input extracted extra details (release date, overview, average viewer rating)
-        // const overlay = document.querySelector(".overlay");
-        // overlay.innerHTML = "";
+        //creating html to input extracted extra details (release date, overview, average viewer rating)
+        const overlay = document.querySelector(".overlay");
+        overlay.innerHTML = "";
 
-        // const releaseDate = document.createElement("p");
-        // releaseDate.classList("releaseDate");
-        // releaseDate.innerText(`Release Date: ${movieArray[i].release_date}`);
+        const releaseDate = document.createElement("p");
+        releaseDate.classList = "releaseDate";
+        releaseDate.innerText = `Release Date: ${movieArray[i].release_date}`;
 
-        // const overview = document.createElement("p");
-        // overview.classList("releaseDate");
-        // overview.innerText(`Overview: ${movieArray[i].overview}`);
+        const overview = document.createElement("p");
+        overview.classList = "releaseDate";
+        overview.innerText = `Overview: ${movieArray[i].overview}`;
 
-        // const voteAverage = document.createElement("p");
-        // voteAverage.classList("releaseDate");
-        // voteAverage.innerText(`Average viewer rating: ${movieArray[i].vote_average} (${movieArray[i].vote_count} total votes)`);
+        const voteAverage = document.createElement("p");
+        voteAverage.classList = "releaseDate";
+        voteAverage.innerText = `Average viewer rating: ${movieArray[i].vote_average} (${movieArray[i].vote_count} total votes)`;
 
-        // overlay.append(releaseDate, overview, voteAverage);
+        overlay.append(releaseDate, overview, voteAverage);
 
 
         //appending selected object as child element into selected querySelector
