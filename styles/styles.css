@@ -29,6 +29,9 @@ header h1 {
   z-index: 10;
   letter-spacing: 2px;
 }
+.collapsible-menu .list-number {
+  font-size: 1.2rem;
+}
 .collapsible-menu label {
   font-family: "Roboto", sans-serif;
   color: #c11959;
@@ -135,7 +138,7 @@ input:checked ~ .menu-content {
   color: white;
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
-  padding: 1%;
+  padding: 5%;
 }
 .overlay:hover {
   opacity: 1;
@@ -201,7 +204,11 @@ footer {
     padding: 5px;
     top: 10%;
   }
+  .collapsible-menu .list-number {
+    font-size: 1rem;
+  }
   .collapsible-menu label {
+    padding-top: 1%;
     font-size: 1.2rem;
   }
   .buttons button {
@@ -219,8 +226,6 @@ footer {
   .collapsible-menu {
     left: 2%;
   }
-}
-@media (max-width: 400px) {
   .overlay p {
     font-size: 0.8rem;
   }

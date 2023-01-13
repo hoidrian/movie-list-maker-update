@@ -124,7 +124,7 @@
                     movieApp.getMovieList();
                 }
                 movieApp.listCounter++;
-                document.querySelector(".list-number").innerText = `${movieApp.listCounter}/16`
+                document.querySelector(".list-number").innerText = `(${movieApp.listCounter}/16)`
                 console.log(movieApp.listCounter);
             } else {
                 alert("Hey there~ Your List is FULL! Remove items before adding you can add more.")
