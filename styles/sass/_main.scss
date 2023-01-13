@@ -213,3 +213,11 @@ footer{
     }
 }
 
+@media (max-width: 450px){
+    
+    .collapsible-menu{
+        li{
+            line-height: 1.7;
+        }
+    }
+}
