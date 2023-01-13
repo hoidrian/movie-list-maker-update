@@ -7,13 +7,12 @@ body {
 header h1 {
   color: rgb(255, 255, 255);
   font-size: 4rem;
-  font-family: "Rowdies", cursive;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
-  padding-top: 5%;
 }
 
 .menu-content {
-  padding: 0 0 0 150px;
+  width: 300px;
   max-height: 0;
   overflow: hidden;
 }
@@ -55,8 +54,12 @@ header h1 {
   padding: 0;
 }
 .collapsible-menu li {
-  color: #e08cfc;
+  color: #464242;
   font-family: "Roboto", sans-serif;
+  line-height: 2;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  padding-left: 5%;
 }
 
 /* Toggle Effect */
@@ -75,8 +78,7 @@ input:checked ~ .menu-content {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  width: 259px;
-  height: 384px;
+  width: 400px;
 }
 
 h2 {
@@ -87,7 +89,6 @@ h2 {
 }
 
 .buttons {
-  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +107,7 @@ h2 {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin: 5%;
+  margin: 3% 4% 0% 4%;
   border-radius: 50%;
 }
 .buttons button:hover {
@@ -124,6 +125,36 @@ h2 {
   color: white;
 }
 
+footer {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 850px) {
+  header h1 {
+    background-color: rgba(0, 0, 0, 0.1411764706);
+    margin-top: 5%;
+    font-size: 2.2rem;
+  }
+  .collapsible-menu {
+    max-width: 40%;
+    padding: 5px;
+    top: 10%;
+  }
+  .collapsible-menu label {
+    font-size: 1.2rem;
+  }
+  .image-container {
+    width: 65%;
+  }
+  .buttons button {
+    margin-top: 5%;
+    font-size: 70px;
+    height: 110px;
+    width: 110px;
+  }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
