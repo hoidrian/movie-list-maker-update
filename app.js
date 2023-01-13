@@ -32,6 +32,7 @@
             if (confirm("Would you like to delete this from your list?")) {
                 document.querySelector("ol").removeChild(this);
                 movieApp.listCounter--;
+                document.querySelector(".list-number").innerText = `${movieApp.listCounter}/16`
                 console.log(movieApp.listCounter);
             }
         });            
@@ -123,6 +124,7 @@
                     movieApp.getMovieList();
                 }
                 movieApp.listCounter++;
+                document.querySelector(".list-number").innerText = `${movieApp.listCounter}/16`
                 console.log(movieApp.listCounter);
             } else {
                 alert("Hey there~ Your List is FULL! Remove items before adding you can add more.")
@@ -132,14 +134,15 @@
         const noButton = document.querySelector(".no");
         noButton.addEventListener("click", function(){
             console.log("next movie");
+            console.log(movieApp.arrayCounter);
             // remove object from page
             document.querySelector(".image-container").innerHTML = "";
             // run displayMovie function again
             movieApp.displayMovie(movieApp.movieList);
-            movieApp.listCounter++;
-            if (movieApp.listCounter === 20) {
+            movieApp.arrayCounter++;
+            if (movieApp.arrayCounter === 20) {
                 movieApp.page = Math.floor(Math.random() * 500);
-                movieApp.listCounter = 1;
+                movieApp.arrayCounter = 1;
                 movieApp.getMovieList();
             }
         })
