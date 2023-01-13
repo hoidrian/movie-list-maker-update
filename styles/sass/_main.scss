@@ -65,6 +65,14 @@ input:checked ~ .menu-content {
 //drop down style ends
 
 //main
+.wrapper{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    position: relative;
+}
+
 .image-container{
     margin: 0 auto;
     display: flex;
@@ -76,8 +84,9 @@ input:checked ~ .menu-content {
     
 }
 .overlay{
-    height: 50%;
-    width: 50%;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
     background: rgba(0,0,0, 0.6);
     position: absolute;
     top: 0;
@@ -90,9 +99,11 @@ input:checked ~ .menu-content {
     align-items: center;
     transition: 0.8s;
     text-align: center;
+    flex-direction: column;
+    
     p{
         font-size: 1.2rem;
-        color: black;
+        color: white;
         text-transform: capitalize;
     }
     &:hover{

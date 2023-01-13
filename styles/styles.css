@@ -63,6 +63,18 @@ input:checked ~ .menu-content {
   max-height: 100%;
 }
 
+.wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+  position: relative;
+}
+
 .image-container {
   margin: 0 auto;
   display: -webkit-box;
@@ -78,8 +90,9 @@ input:checked ~ .menu-content {
 }
 
 .overlay {
-  height: 50%;
-  width: 50%;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
@@ -99,10 +112,14 @@ input:checked ~ .menu-content {
   -webkit-transition: 0.8s;
   transition: 0.8s;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .overlay p {
   font-size: 1.2rem;
-  color: black;
+  color: white;
   text-transform: capitalize;
 }
 .overlay:hover {
