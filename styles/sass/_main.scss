@@ -67,6 +67,25 @@ header{
         padding-left: 5%;
         cursor: pointer;
     }
+    .trash{
+        border: none;
+        padding: 5px;
+        font-size: 15px;
+        height: 28px;
+        width: 28px;
+        box-shadow: 0 2px 4px rgb(0, 0, 0);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 3% 4% 0% 4%;;
+        border-radius: 50%;
+        margin-bottom: 2%;
+        background-color: #c11959;
+        color: white;
+            &:hover{
+                background-color: white;
+                color: #c11959 ;
+            }
+    }
 }
 /* Toggle Effect */
 input:checked ~ .menu-content {
@@ -116,7 +135,7 @@ input:checked ~ .menu-content {
         color: white;
         text-transform: capitalize;
         font-family: "Roboto", sans-serif;
-        padding: 5%;
+        padding: 0% 4% 0% 4%;
     }
     &:hover{
         opacity: 1;
