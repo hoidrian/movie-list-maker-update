@@ -13,7 +13,7 @@ header h1 {
 
 .menu-content {
   width: 300px;
-  max-height: 0;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -64,14 +64,15 @@ header h1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.collapsible-menu li {
+.collapsible-menu .list {
   color: #464242;
   font-family: "Roboto", sans-serif;
   line-height: 2;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  padding-left: 5%;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 .collapsible-menu .trash {
   border: none;
@@ -90,14 +91,14 @@ header h1 {
   background-color: #c11959;
   color: white;
 }
-.collapsible-menu .trash:hover {
+.collapsible-menu .trash:hover, .collapsible-menu .trash:focus {
   background-color: white;
   color: #c11959;
 }
 
 /* Toggle Effect */
-input:checked ~ .menu-content {
-  max-height: 100%;
+input:checked .menu-content {
+  height: 0%;
 }
 
 .wrapper {
@@ -159,7 +160,7 @@ input:checked ~ .menu-content {
   color: white;
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
-  padding: 5%;
+  padding: 0% 4% 0% 4%;
 }
 .overlay:hover {
   opacity: 1;
