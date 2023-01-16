@@ -17,7 +17,7 @@ header{
 //mobie nav style
 .menu-content {
     width: 300px;
-    max-height: 0;
+    max-height: 100%;
     overflow: hidden;
 }
 .collapsible-menu {
@@ -81,15 +81,16 @@ header{
         margin-bottom: 2%;
         background-color: #c11959;
         color: white;
-            &:hover{
+            &:hover,
+            &:focus{
                 background-color: white;
                 color: #c11959 ;
             }
     }
 }
 /* Toggle Effect */
-input:checked ~ .menu-content {
-    max-height: 100%;
+input:checked .menu-content {
+    height: 0%;
 }
 //drop down style ends
 
