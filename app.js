@@ -100,19 +100,18 @@
     }
     
     //set up trash can button
+    
+
+    //execute the function by setting up eventListener
     movieApp.setUpEventListeners = function() {
         const trashButton = document.querySelector(".trash");
         trashButton.addEventListener("click" , function(){
-            if (confirm("Would you like to your list?")) {
+            if (confirm("Would you like to clear your list?")) {
                 document.querySelector("ol").innerHTML = "";
                 movieApp.listCounter = 0;
             }
         })
-    }
-
-
-    //execute the function by setting up eventListener
-    movieApp.setUpEventListeners = function() {
+        
         //configuring the yes(like) button 
         const yesButton = document.querySelector(".yes");
         yesButton.addEventListener("click", function(){
