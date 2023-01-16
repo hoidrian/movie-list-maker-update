@@ -7,21 +7,21 @@
     // title
     // poster
         // alt text
-    // description + run-time
+    // description
 
 // make a container with 3 elements - h2 for movie title, img for poster, article for movie description
 
 // display the container in the middle of the screen
 
 // add event listener to the buttons
-    // right button click stores the object in a list and displays it below in a to-watch list 
-        // adds object as a list item to blank ul at bottom of page
+    // right button click stores the object in a list and displays it in a to-watch list 
+        // adds object as a list item to blank ol
             // starts hidden, can be displayed via hover/click (CSS)
-            // thumbnail of poster, title, description + run-time
+            // thumbnail of poster, title, description
     // left button click gets rid of the object and cycles to the next random movie
 
     const movieApp = {};
-//getting api key
+    //getting api key
     movieApp.apiKey = "e21d59eeaa5f5c9a061e1be07d38cac1"
     movieApp.movieList = [];
     movieApp.page = 1;
@@ -33,7 +33,6 @@
                 document.querySelector("ol").removeChild(this);
                 movieApp.listCounter--;
                 document.querySelector(".list-number").innerText = `${movieApp.listCounter}/16`
-                console.log(movieApp.listCounter);
             }
         });            
     }
@@ -53,7 +52,6 @@
         })
         .then(function(jsonResponse){
             movieApp.movieList = jsonResponse.results;
-            console.log(jsonResponse);
             movieApp.displayMovie(movieApp.movieList);
         })
     }
@@ -109,6 +107,7 @@
             if (confirm("Would you like to clear your list?")) {
                 document.querySelector("ol").innerHTML = "";
                 movieApp.listCounter = 0;
+                document.querySelector(".list-number").innerText = `${movieApp.listCounter}/16`;
             }
         })
         
@@ -128,15 +127,13 @@
                 // run displayMovie function again
                 movieApp.displayMovie(movieApp.movieList);
                 movieApp.arrayCounter++;
-                console.log(movieApp.arrayCounter);
                 if (movieApp.arrayCounter === 20) {
                     movieApp.page = Math.floor(Math.random() * 150);
                     movieApp.arrayCounter = 1;
                     movieApp.getMovieList();
                 }
                 movieApp.listCounter++;
-                document.querySelector(".list-number").innerText = `(${movieApp.listCounter}/16)`
-                console.log(movieApp.listCounter);
+                document.querySelector(".list-number").innerText = `(${movieApp.listCounter}/16)`;
             } else {
                 alert("Hey there~ Your List is FULL! Remove items before adding you can add more.")
             }
@@ -144,8 +141,6 @@
         //configuring the no button
         const noButton = document.querySelector(".no");
         noButton.addEventListener("click", function(){
-            console.log("next movie");
-            console.log(movieApp.arrayCounter);
             // remove object from page
             document.querySelector(".image-container").innerHTML = "";
             // run displayMovie function again
