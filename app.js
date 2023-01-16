@@ -102,6 +102,7 @@
 
     //execute the function by setting up eventListener
     movieApp.setUpEventListeners = function() {
+        //trash can button
         const trashButton = document.querySelector(".trash");
         trashButton.addEventListener("click" , function(){
             if (confirm("Would you like to clear your list?")) {
@@ -117,7 +118,7 @@
             // add movie title to watchList
             if (movieApp.listCounter <= 15) {
                 const newListItem = document.querySelector("h2").innerText;
-                const listingMovie = document.createElement("li");
+                const listingMovie = document.createElement("button");
                 listingMovie.innerText = newListItem;
                 listingMovie.classList = "list";
                 document.querySelector("ol").appendChild(listingMovie);
@@ -152,6 +153,16 @@
                 movieApp.getMovieList();
             }
         })
+
+        const listButton = document.querySelector(".menu-button");
+        const inputElement = document.querySelector("input");
+        listButton.addEventListener("click", function() {
+            if(inputElement.checked) {
+                inputElement.checked = false;
+            } else {
+                inputElement.checked = true;
+            }
+        });
     }
     //upon page load - fecting data (getMovieList) and append data (setUpEventListeners)
     movieApp.init = function () {
