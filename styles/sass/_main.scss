@@ -17,7 +17,7 @@ header{
 //mobie nav style
 .menu-content {
     width: 300px;
-    max-height: 100%;
+    max-height: 0;
     overflow: hidden;
 }
 .collapsible-menu {
@@ -69,6 +69,19 @@ header{
         border: none;
         
     }
+    .menu-button{
+        background-color: #c11959;
+        color: white;
+        border: none;
+        box-shadow: 0 2px 4px rgb(0, 0, 0);
+        margin-bottom: 1%;
+        letter-spacing: 4px;
+            &:hover,
+            &:focus{
+                background-color: white;
+                color: #c11959 ;
+            }
+    }
     .trash{
         border: none;
         padding: 5px;
@@ -91,8 +104,8 @@ header{
     }
 }
 /* Toggle Effect */
-input:checked .menu-content {
-    height: 0%;
+input:checked ~ .menu-content {
+    max-height: 100%
 }
 //drop down style ends
 
@@ -164,7 +177,8 @@ h2{
         transition: all 0.3s ease;
         margin: 3% 4% 0% 4%;;
         border-radius: 50%;
-            &:hover{
+            &:hover,
+            &:focus{
                 scale: 1.1;
             }
         
@@ -200,7 +214,7 @@ footer{
 
     .collapsible-menu{ 
         padding: 5px;
-        top: 10%;
+        top: 8%;
         .list-number{
             font-size: 1rem;
         }
