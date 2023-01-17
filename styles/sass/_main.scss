@@ -64,7 +64,8 @@ header{
         transition: 0.3s;
         &:hover,
         &:focus{
-            scale:1.1 ;
+            color: white;
+            background-color: #c11959;
         }
         
     }

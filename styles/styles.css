@@ -71,7 +71,8 @@ header h1 {
   transition: 0.3s;
 }
 .collapsible-menu .list:hover, .collapsible-menu .list:focus {
-  scale: 1.1;
+  color: white;
+  background-color: #c11959;
 }
 .collapsible-menu .menu-button {
   background-color: #c11959;
