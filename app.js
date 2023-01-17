@@ -108,7 +108,7 @@
             if (confirm("Would you like to clear your list?")) {
                 document.querySelector("ol").innerHTML = "";
                 movieApp.listCounter = 0;
-                document.querySelector(".list-number").innerText = `${movieApp.listCounter}/16`;
+                document.querySelector(".list-number").innerText = `(${movieApp.listCounter}/16)`;
             }
         })
         
