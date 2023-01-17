@@ -43,13 +43,7 @@ header{
         padding: 5% 0%;
         opacity: 0.8;
         text-align: center;
-        transition: 0.5s;
         padding-bottom: 1%;
-        &:hover,
-        &:focus{
-        scale: 1.1;
-        color: #464242;
-        }
     }   
     input#menu {
         display: none;
@@ -67,15 +61,22 @@ header{
         cursor: pointer;
         background: none;
         border: none;
+        transition: 0.3s;
+        &:hover,
+        &:focus{
+            scale:1.1 ;
+        }
         
     }
     .menu-button{
         background-color: #c11959;
         color: white;
         border: none;
-        box-shadow: 0 2px 4px rgb(0, 0, 0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.397);
         margin-bottom: 1%;
         letter-spacing: 4px;
+        transition: 0.5s;
+        border-radius: 5%;
             &:hover,
             &:focus{
                 background-color: white;
@@ -105,7 +106,7 @@ header{
 }
 /* Toggle Effect */
 input:checked ~ .menu-content {
-    max-height: 100%
+    max-height: 100%;
 }
 //drop down style ends
 
@@ -214,7 +215,7 @@ footer{
 
     .collapsible-menu{ 
         padding: 5px;
-        top: 8%;
+        top: 9%;
         .list-number{
             font-size: 1rem;
         }

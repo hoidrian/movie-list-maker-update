@@ -42,13 +42,7 @@ header h1 {
   padding: 5% 0%;
   opacity: 0.8;
   text-align: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   padding-bottom: 1%;
-}
-.collapsible-menu label:hover, .collapsible-menu label:focus {
-  scale: 1.1;
-  color: #464242;
 }
 .collapsible-menu input#menu {
   display: none;
@@ -73,15 +67,23 @@ header h1 {
   cursor: pointer;
   background: none;
   border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.collapsible-menu .list:hover, .collapsible-menu .list:focus {
+  scale: 1.1;
 }
 .collapsible-menu .menu-button {
   background-color: #c11959;
   color: white;
   border: none;
-  -webkit-box-shadow: 0 2px 4px rgb(0, 0, 0);
-          box-shadow: 0 2px 4px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.397);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.397);
   margin-bottom: 1%;
   letter-spacing: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 5%;
 }
 .collapsible-menu .menu-button:hover, .collapsible-menu .menu-button:focus {
   background-color: white;
@@ -237,7 +239,7 @@ footer {
   }
   .collapsible-menu {
     padding: 5px;
-    top: 8%;
+    top: 9%;
   }
   .collapsible-menu .list-number {
     font-size: 1rem;
